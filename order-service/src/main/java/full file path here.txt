@@ -1,0 +1,2 @@
+@RequestMapping("/xxx")
+@GetMapping("/yyy")
