@@ -45,6 +45,41 @@ Terraform State Management:
 Implement remote state storage using Blob Storage / GCP Files
 Set up state locking
 Configure workspace separation for different environments
+==================================================================
+repo/
+│
+├── order-service/              # Java
+│   ├── Dockerfile
+│   └── src/
+│
+├── patient-service/            # Node.js
+│   ├── Dockerfile
+│   └── src/
+│
+├── appointment-service/        # Node.js
+│   ├── Dockerfile
+│   └── src/
+│
+├── helm/
+│   ├── order-service/
+│   ├── patient-service/
+│   └── appointment-service/
+│
+├── terraform/
+│   ├── env/
+│   │   ├── dev/
+│   │   ├── staging/
+│   │   └── prod/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── backend.tf
+│
+└── .github/workflows/
+    ├── ci-microservices.yml
+    ├── terraform-plan.yml
+    └── terraform-apply.yml
+
 
 ### GitHub Actions / Azure DevOps for IaC:
 Create workflows for:
